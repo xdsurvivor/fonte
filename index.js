@@ -8,7 +8,7 @@
         submitBtn.addEventListener("click", () => {
             const val = NomeDono.value;
             const val2 = NomePet.value;
-            if (val.trim() !== "" &amp;&amp; NomeDono.checkValidity() &amp;&amp; NomePet.checkValidity) {
+            if (val.trim() !== "" && NomeDono.checkValidity() && NomePet.checkValidity) {
                 // console.log(val);
                 generatePDF(val,val2);
               } else {
