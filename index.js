@@ -3,7 +3,20 @@
         const NomePet = document.getElementById("nomeP");
         const submitBtn = document.getElementById("submitBtn");
         const { PDFDocument, rgb, degrees } = PDFLib;
-        
+        const loader = document.querySelector("#loading");
+
+function displayLoading() {
+    loader.classList.add("display");
+    setTimeout(() => {
+        loader.classList.remove("display");
+    }, 5000);
+}
+
+
+function hideLoading() {
+    loader.classList.remove("display");
+}
+
         
         submitBtn.addEventListener("click", () => {
                 displayLoading()
@@ -17,19 +30,6 @@
                 NomePet.reportValidity();                
               }
         });
-const loader = document.querySelector("#loading");
-
-function displayLoading() {
-    loader.classList.add("display");
-    setTimeout(() => {
-        loader.classList.remove("display");
-    }, 5000);
-}
-
-
-function hideLoading() {
-    loader.classList.remove("display");
-}
 
         const generatePDF = async (name) => {
             const existingPdfBytes = await fetch("http://blog.banzoo.com.br/wp-content/uploads/certificado/Certificado.pdf").then((res) =>
