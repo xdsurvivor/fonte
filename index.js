@@ -32,7 +32,8 @@ function hideLoading() {
 
         const generatePDF = async (name) => {
             const existingPdfBytes = await fetch("http://blog.banzoo.com.br/wp-content/uploads/certificado/Certificado.pdf").then((res) =>
-                                 res.arrayBuffer()
+                                 res.arrayBuffer(),
+                                  displayLoading()
                    
             );
             displayLoading()
