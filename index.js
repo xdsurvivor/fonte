@@ -75,5 +75,5 @@ function hideLoading() {
           const pdfDataUri = await pdfDoc.saveAsBase64({ dataUri: true });
           saveAs(pdfDataUri,"Certificado-mae_de_pet.pdf")
                           hideLoading()
-                window.alert("Seu certificado esta pronto, caso o download nao inicie, verifique se o navegador nao esta bloqueando.);
+                window.alert("Seu certificado esta pronto, caso o download nao inicie, verifique se o navegador nao esta bloqueando.");
         };
