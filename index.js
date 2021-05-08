@@ -18,7 +18,7 @@
               }
         });
         const generatePDF = async (name) => {
-            const existingPdfBytes = await fetch("https://d335luupugsy2.cloudfront.net/cms/files/207518/1620228742certificado-mae_de_pet-banzoo.pdf").then((res) =>
+            const existingPdfBytes = await fetch("http://blog.banzoo.com.br/wp-content/uploads/certificado/Certificado.pdf").then((res) =>
               res.arrayBuffer()
             );
         
