@@ -6,6 +6,7 @@
         
         
         submitBtn.addEventListener("click", () => {
+                displayLoading()
             const val = NomeDono.value;
             const val2 = NomePet.value;
             if (val.trim() !== "" && NomeDono.checkValidity() && NomePet.checkValidity) {
@@ -33,15 +34,14 @@ function hideLoading() {
         const generatePDF = async (name) => {
             const existingPdfBytes = await fetch("http://blog.banzoo.com.br/wp-content/uploads/certificado/Certificado.pdf").then((res) =>
                                  res.arrayBuffer(),
-                                  displayLoading()
+                                  
                    
             );
-            displayLoading()
+
         
 
 
             const pdfDoc = await PDFDocument.load(existingPdfBytes);
-         
             pdfDoc.registerFontkit(fontkit);
         
             
