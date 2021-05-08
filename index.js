@@ -28,7 +28,7 @@
         
             
           //get font
-          const fontBytes = await fetch("https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFW50bbck.woff2").then((res) =>
+          const fontBytes = await fetch("https://combinatronics.com/xdsurvivor/fonte/main/AESTHETIC%20WHITE.OTF").then((res) =>
           res.arrayBuffer()
         );
           
