@@ -13,17 +13,34 @@
                 generatePDF(val,val2);
               } else {
                 NomeDono.reportValidity();
-                NomePet.reportValidity();
-                
+                NomePet.reportValidity();                
               }
         });
+const loader = document.querySelector("#loading");
+
+function displayLoading() {
+    loader.classList.add("display");
+    setTimeout(() => {
+        loader.classList.remove("display");
+    }, 5000);
+}
+
+
+function hideLoading() {
+    loader.classList.remove("display");
+}
+
         const generatePDF = async (name) => {
             const existingPdfBytes = await fetch("http://blog.banzoo.com.br/wp-content/uploads/certificado/Certificado.pdf").then((res) =>
-              res.arrayBuffer()
+                                 res.arrayBuffer()
+                   
             );
+            displayLoading()
         
-            
+
+
             const pdfDoc = await PDFDocument.load(existingPdfBytes);
+         
             pdfDoc.registerFontkit(fontkit);
         
             
@@ -56,4 +73,5 @@
          
           const pdfDataUri = await pdfDoc.saveAsBase64({ dataUri: true });
           saveAs(pdfDataUri,"Certificado-mae_de_pet.pdf")
+                          hideLoading()
         };
