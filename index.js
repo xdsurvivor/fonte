@@ -28,7 +28,7 @@
         
             
           //get font
-          const fontBytes = await fetch("https://combinatronics.com/xdsurvivor/fonte/main/AESTHETIC%20WHITE.OTF").then((res) =>
+          const fontBytes = await fetch("http://blog.banzoo.com.br/wp-content/uploads/useanyfont/9261Aesthetic-White.woff").then((res) =>
           res.arrayBuffer()
         );
           
