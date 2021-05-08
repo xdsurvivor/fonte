@@ -49,7 +49,7 @@
            firstPage.drawText(NomePet.value, {
                x: 480,
                y: 60,
-               size: 108,
+               size: 88,
                font: AESTHETICFont,
                color: rgb(0, 0.118, 0.42),
            });
