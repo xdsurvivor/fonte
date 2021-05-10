@@ -87,7 +87,7 @@ function hideLoading() {
 var blob = new Blob( [view], { type: "application/pdf" });
 var url = URL.createObjectURL(blob);
 window.alert("Seu certificado está pronto, caso o download não inicie, verifique se o seu navegador não está o bloqueando.");	
-window.open(url)
+location.href = url;
 
 		 //		 window.open(pdfDataUri, '_blank');
 		//  let isIOS = /iPad|iPhone|iPod/.test(navigator.platform)
