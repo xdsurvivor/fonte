@@ -72,8 +72,28 @@ function hideLoading() {
                color: rgb(0, 0.118, 0.42),
            });
          
-          const pdfDataUri = await pdfDoc.saveAsBase64({ dataUri: true });
-          saveAs(pdfDataUri,"Certificado-mae_de_pet.pdf")
-                          hideLoading()
-                window.alert("Seu certificado está pronto, caso o download não inicie, verifique se o seu navegador não está o bloqueando.");
+          const pdfDataUri = await pdfDoc.saveAsBase64({ dataUri: false });
+
+	var base64str = pdfDataUri
+			  var binary = atob(base64str.replace(/\s/g, ''));
+	var len = binary.length;
+	var buffer = new ArrayBuffer(len);
+	var view = new Uint8Array(buffer);
+	for (var i = 0; i < len; i++) {
+    view[i] = binary.charCodeAt(i);
+}
+
+// create the blob object with content-type "application/pdf"               
+var blob = new Blob( [view], { type: "application/pdf" });
+var url = URL.createObjectURL(blob);
+window.alert("Seu certificado está pronto, caso o download não inicie, verifique se o seu navegador não está o bloqueando.");	
+window.open(url)
+
+		 //		 window.open(pdfDataUri, '_blank');
+		//  let isIOS = /iPad|iPhone|iPod/.test(navigator.platform)
+//|| (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+       //   saveAs(pdfDataUri,"Certificad	o-mae_de_pet.pdf")
         };
+
+
+
