@@ -60,7 +60,7 @@ const generatePDF = async (name) => {
      x: 190,
      y: 260,
      size: 64,
-     font: AESTHETICFont,
+     font: Open Sans,
        color: rgb(0, 0.118, 0.42),
        });
    
@@ -68,7 +68,7 @@ const generatePDF = async (name) => {
        x: 480,
        y: 60,
        size: 88,
-       font: AESTHETICFont,
+       font: Open Sans,
        color: rgb(0, 0.118, 0.42),
    });
  
