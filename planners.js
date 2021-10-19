@@ -32,7 +32,7 @@ submitBtn.addEventListener("click", () => {
 });
 
 const generatePDF = async (name) => {
-    const existingPdfBytes = await fetch("https://agenciaincom.com/PlannerIDC/IDC_PlannerSemanal.pdf").then((res) =>
+    const existingPdfBytes = await fetch("https://agenciaincom.com/PlannerIDC/IDC_PlannerSemanal.pdf", {mode: no-cors}).then((res) =>
                          res.arrayBuffer(),
                           
            
