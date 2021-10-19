@@ -46,7 +46,7 @@ const generatePDF = async (name) => {
 
     
   //get font
-  const fontBytes = await fetch("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap").then((res) =>
+  const fontBytes = await fetch("hhttps://agenciaincom.com.br/wp-content/uploads/fonts/Opensans.ttf").then((res) =>
   res.arrayBuffer()
 );
   
@@ -60,15 +60,15 @@ const generatePDF = async (name) => {
      x: 190,
      y: 260,
      size: 64,
-     font: Open+Sans,
+     font: OpenSans,
        color: rgb(0, 0.118, 0.42),
        });
    
-   firstPage.drawText(NomePet.value, {
+   firstPage.drawText(mes.value, {
        x: 480,
        y: 60,
        size: 88,
-       font: Open+Sans,
+       font: OpenSans,
        color: rgb(0, 0.118, 0.42),
    });
  
