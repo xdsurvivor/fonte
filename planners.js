@@ -65,8 +65,8 @@ const generatePDF = async (name) => {
        });
    
    firstPage.drawText(mes.value, {
-       x: 710,
-       y: 502,
+       x: 715,
+       y: 501,
        size: 18,
        font: OpenSans,
        color: rgb(0, 0, 0),
