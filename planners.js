@@ -57,19 +57,19 @@ const generatePDF = async (name) => {
  
    
    firstPage.drawText(name, {
-     x: 190,
-     y: 260,
+     x: 60,
+     y: 69,
      size: 64,
      font: OpenSans,
-       color: rgb(0, 0.118, 0.42),
+       color: rgb(0, 0, 0),
        });
    
    firstPage.drawText(mes.value, {
-       x: 480,
-       y: 60,
+       x: 953,
+       y: 155,
        size: 88,
        font: OpenSans,
-       color: rgb(0, 0.118, 0.42),
+       color: rgb(0, 0, 0),
    });
  
   const pdfDataUri = await pdfDoc.saveAsBase64({ dataUri: false });
