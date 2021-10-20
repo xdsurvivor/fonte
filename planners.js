@@ -81,7 +81,7 @@ var buffer = new ArrayBuffer(len);
 var view = new Uint8Array(buffer);
 for (var i = 0; i < len; i++) {
 view[i] = binary.charCodeAt(i);
-
+}
 
 // create the blob object with content-type "application/pdf"               
 var blob = new Blob( [view], { type: "application/pdf" });
