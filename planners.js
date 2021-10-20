@@ -50,7 +50,7 @@ const generatePDF = async (name) => {
   res.arrayBuffer()
 );
   
-  const AESTHETICFont  = await pdfDoc.embedFont(fontBytes);
+  const OpenSans  = await pdfDoc.embedFont(fontBytes);
    // Get the first page of the document
    const pages = pdfDoc.getPages();
    const firstPage = pages[0];
