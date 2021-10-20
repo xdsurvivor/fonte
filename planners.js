@@ -58,15 +58,15 @@ const generatePDF = async (name) => {
    
    firstPage.drawText(name, {
      x: 60,
-     y: 69,
+     y: 60,
      size: 64,
      font: OpenSans,
        color: rgb(0, 0, 0),
        });
    
    firstPage.drawText(mes.value, {
-       x: 953,
-       y: 155,
+       x: 100,
+       y: 100,
        size: 88,
        font: OpenSans,
        color: rgb(0, 0, 0),
@@ -81,12 +81,12 @@ var buffer = new ArrayBuffer(len);
 var view = new Uint8Array(buffer);
 for (var i = 0; i < len; i++) {
 view[i] = binary.charCodeAt(i);
-}
+
 
 // create the blob object with content-type "application/pdf"               
 var blob = new Blob( [view], { type: "application/pdf" });
 var url = URL.createObjectURL(blob);
-window.alert("Seu plamnner está pronto, caso o download não inicie, verifique se o seu navegador não está o bloqueando.");	
+window.alert("Seu planner está pronto, caso o download não inicie, verifique se o seu navegador não está o bloqueando.");	
 location.href = url;
 
  //		 window.open(pdfDataUri, '_blank');
