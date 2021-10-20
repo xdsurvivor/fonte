@@ -46,7 +46,7 @@ const generatePDF = async (name) => {
 
     
   //get font
-  const fontBytes = await fetch("hhttps://agenciaincom.com.br/wp-content/uploads/fonts/Opensans.ttf").then((res) =>
+  const fontBytes = await fetch("https://agenciaincom.com.br/wp-content/uploads/fonts/Opensans.ttf").then((res) =>
   res.arrayBuffer()
 );
   
