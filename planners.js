@@ -59,7 +59,7 @@ const generatePDF = async (name) => {
    firstPage.drawText(name, {
      x: 60,
      y: 550,
-     size: 64,
+     size: 18,
      font: OpenSans,
        color: rgb(0, 0, 0),
        });
@@ -67,7 +67,7 @@ const generatePDF = async (name) => {
    firstPage.drawText(mes.value, {
        x: 450,
        y: 400,
-       size: 88,
+       size: 18,
        font: OpenSans,
        color: rgb(0, 0, 0),
    });
