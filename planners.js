@@ -58,7 +58,7 @@ const generatePDF = async (name) => {
    
    firstPage.drawText(name, {
      x: 60,
-     y: 590,
+     y: 550,
      size: 64,
      font: OpenSans,
        color: rgb(0, 0, 0),
